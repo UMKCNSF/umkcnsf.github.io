@@ -1,0 +1,218 @@
+.nav-link{
+    color: #000000 !important;
+}
+.nav-link:hover{
+    color: #f05f40!important;
+}
+
+/* Sponsor */
+#sponsor-pane {
+    margin-top: 10vh; }
+
+#sponsor-page-header {
+    background: url(../images/sponsor.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; }
+
+#sponsor-pane-contact {
+    margin-top: 20px; }
+
+.sponsor-email-link {
+    text-decoration: none; }
+.sponsor-email-link:hover {
+    color: gray; }
+
+.sponsor-content {
+    margin-top: 40px; }
+
+#our-sponsors {
+    margin-top: 40px; }
+#our-sponsors h2 {
+    margin-bottom: 40px; }
+
+.sponsor-lead, .sponsor-line {
+    width: 100%; }
+
+.sponsor-lead {
+    width: 90%;
+    text-align: center; }
+.sponsor-lead img {
+    width: 80%; }
+
+.second-tier div {
+    float: left;
+    width: 49.2% !important;
+    text-align: center; }
+.second-tier #centene-logo img {
+    margin-top: 10%;
+    width: 70%; }
+.second-tier #pfizer-logo img {
+    width: 60% !important; }
+.second-tier #washu-logo img {
+    width: 60% !important; }
+
+.third-tier {
+    margin: 40px 0% !important;
+    width: 100%; }
+@media all and (max-width: 1023px) {
+    .third-tier {
+        margin: 10px 0% !important; } }
+.third-tier div {
+    float: left;
+    width: 32.8% !important;
+    text-align: center; }
+.third-tier div img {
+    width: 75%;
+}
+.third-tier #red-card-logo img {
+    padding-top: 5%; }
+.third-tier #lumeris-logo img {
+    width: 80%;
+    padding-top: 5%; }
+.third-tier #att-logo img {
+    width: 60%; }
+.third-tier #siemens-logo img {
+    padding-top: 8%; }
+.third-tier #google-logo img {
+    margin-top: 10px; }
+.third-tier #cisco-logo img {
+    width: 60%; }
+.third-tier #true-ventures-logo img {
+    margin-top: 10%; }
+
+.fourth-tier {
+    margin: 20px 0% !important;
+    width: 100%; }
+.fourth-tier div {
+    float: left;
+    width: 18.8% !important;
+    text-align: center; }
+.fourth-tier div img {
+    width: 50%; }
+.fourth-tier #staff-joy-logo img {
+    margin-top: 10%; }
+.fourth-tier #arch-grants-logo img {
+    padding-top: 10px; }
+@media (max-width: 600px) {
+    .fourth-tier #arch-grants-logo img {
+        padding-top: 0px; } }
+.fourth-tier #panera-logo img {
+    width: 35%; }
+.fourth-tier #su-logo img {
+    padding-top: 8%; }
+.fourth-tier #wolfram-logo img {
+    width: 50%; }
+.fourth-tier #pi-pizza-logo img {
+    width: 35%; }
+.fourth-tier #hta-logo img {
+    width: 70%; }
+.fourth-tier #seoul-taco-logo img {
+    width: 50%; }
+.fourth-tier #kind-logo img {
+    width: 40%; }
+.fourth-tier #meditation-lounge-logo img {
+    width: 80%; }
+.fourth-tier #casa-bagus-logo img {
+    width: 30%; }
+.fourth-tier #house-of-india-logo img {
+    width: 40%; }
+/* COUNTER */
+#archhacks-countdown-wrapper {
+    display: block;
+    z-index: 1;
+    position: relative;
+    width: 230px;
+    padding: 20px;
+    background-color: transparent;
+    -webkit-box-shadow: 1px 1px 4px -1px #b0b0b0;
+    -moz-box-shadow: 1px 1px 4px -1px #b0b0b0;
+    box-shadow: 1px 1px 4px -1px #b0b0b0;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: white;
+    height: auto;
+    background-color: darkcyan;
+    border-radius: 30px;
+    margin-left: 35%;
+    margin-bottom: 20px;
+}
+@media all and (max-width: 1023px) {
+    #archhacks-countdown-wrapper {
+        display: none; } }
+
+#archhacks-countdown {
+    height: 40px;
+    font-size: 25px;
+    font-weight: 600; }
+
+.countdown-section {
+    width: 25%;
+    float: left; }
+
+.countdown-section-val {
+    width: 90%;
+    float: left;
+    text-align: center; }
+
+.countdown-section-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-right: 10%;
+    font-weight: 600;
+    letter-spacing: 0px; }
+
+.countdown-divider {
+    width: 10%;
+    float: left; }
+
+#archhacks-countdown-title {
+    text-align: center;
+    margin-top: 5px;
+    margin-left: -10px; }
+
+.r-text{
+    color: blue!important;
+}
+.my-hr{
+    max-width: 1000px!important;
+    border-width: 2px!important;
+    border-color: black;
+    margin-left: 1px;
+}
+.ft{
+    font-weight: bold;
+}
+.btn-sty{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 290px;
+    height: 120px;
+}
+
+@media only screen and (max-width: 500px) {
+    iframe{
+        width: 100%;
+        height:100%;
+    }
+    #about{
+        height: 120%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #about{
+        height: 150%;
+    }
+}
