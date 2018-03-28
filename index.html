@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hack" >
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/ico" href="img/logo.png">
+
+    <title>UMKC Hackathon Fall 2017</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/commonStyles.css">
+
+
+
+  </head>
+
+  <body id="page-top" ng-controller="events">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #fff;" id="mainNav">
+      <div class="container">
+      <!--  <a class="navbar-brand js-scroll-trigger" href="#page-top">UMKC Hackathon</a> -->
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="navbar-brand js-scroll-trigger" style="margin-right: 5px;" src="img/UMKC_logo.png" width="100" height="70" />
+          <img class="navbar-brand js-scroll-trigger" style="margin-right: 0px;" src="img/H_and_R_Block_logo.svg.png" width="100" height="70"/></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#rules">Rules</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#eventinfo">Info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#submission">Submission</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Dashboard" ng-click="typedata()">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#judges">Judges</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#sponsors">Sponsors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Schedule">Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#usecases">Usecases</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>HACKATHON FALL 2K17</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5" style="color: #ffffff; font-weight: 700;">Exciting Prizes !!!!  Code it ... Win it!</p>
+
+            <div id="archhacks-countdown-wrapper">
+              <h4 id="archhacks-countdown-title">Grand Finale</h4>
+              <div id="archhacks-countdown" style="font-size: 0.9rem">
+                <div id="countdown-days" class="countdown-section">
+                  <div id="countdown-days-val" class="countdown-section-val"></div><div class="countdown-divider">:</div>
+                  <div id="countdown-days-label" class="countdown-section-label">
+                    Days
+                  </div>
+                </div>
+                <div id="countdown-hours" class="countdown-section">
+                  <div id="countdown-hours-val" class="countdown-section-val"></div><div class="countdown-divider">:</div>
+                  <div id="countdown-hours-label" class="countdown-section-label">
+                    Hrs
+                  </div>
+                </div>
+                <div id="countdown-minutes" class="countdown-section">
+                  <div id="countdown-minutes-val" class="countdown-section-val"></div><div class="countdown-divider">:</div>
+                  <div id="countdown-minutes-label" class="countdown-section-label">
+                    Mins
+                  </div>
+                </div>
+                <div id="countdown-seconds" class="countdown-section">
+                  <div id="countdown-seconds-val" class="countdown-section-val"></div>
+                  <div id="countdown-seconds-label" class="countdown-section-label">
+                    Secs
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://umkchackathon.typeform.com/to/CoImKd" target="_blank">Register your Team</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+      <div class="container">
+        <div id="iframe_parent" class="row">
+          <div class="col-lg-8 mx-auto text-center" style="height: auto; width: 100%;">
+            <h2 class="section-heading text-white">You've got what it takes?</h2>
+            <hr class="light my-4">
+            <p class="text-faded mb-4">Calling all great students! UMKC is challenging you to show us how you can transform robotics, industrial IoT, healthcare, security, or any other industry with a powerful solutions. We want to see your creation!</p>
+            <iframe class="video-hackathon"  height="450" width="800" src="https://www.youtube.com/embed/xXMCpy5yrow?playlist=xXMCpy5yrow&loop=1"></iframe>
+            </br>
+            <!--<a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Get Started!</a>-->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rules" style="background-color:#ffe8a1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Rules</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <h3 class="mb-3">Eligibility</h3>
+              <p class="text-info mb-0" class="r-text">You must be a current student of UMKC (hereafter referred to as participant). Participation ensures that the participant agrees unconditionally to all terms and conditions.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+
+              <h3 class="mb-3">Registration Guideline</h3>
+              <p class="text-info mb-0" class="r-text">You must provide Top Three Choices of your usecase.
+                A project will be assigned to your team according to your choices (First-come, first-served)
+                Please note that the registration will open at 7 pm and close at 9 pm on 9th November 2017.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <h3 class="mb-3">Implementation Guideline</h3>
+              <p class="text-info mb-0" class="r-text">There is no restriction on technology. You can use any technology to implement your project unless mentioned in the use case.
+                Come up with a feasible and unique solution to the problem.
+                Try to complete the given requirements as much as possible.
+                Make a good quality YouTube video.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box mt-5 mx-auto">
+              <h3 class="mb-3">Judging Criteria</h3>
+              <p class="text-info mb-0" class="r-text">Judgement is based on the evaluation guidelines provided by the use case providers, i.e, in this case an Organization or a group in an Organization. The Hackathon winners will be selected by a panel of Judges from the Industry</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="eventinfo" style="background-color: antiquewhite;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Essential Info</h2>
+            <p>event at a glance</p>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <div class="col-md-4" style="float: left">
+          <div style="border: 1px solid #ddd; padding: 20px; margin: 30px; border-radius: 5px;">
+            <h3>
+              <i class="fa fa-clock-o fa-fw"></i>
+              Logistics
+            </h3>
+            <p>
+              <b>72</b> Hours<br>
+              <b>100+</b> Hackers<br>
+              Top-notch mentors, knowledge sharing, and prizes
+            </p>
+          </div>
+          <div style="border: 1px solid #ddd; padding: 20px; margin: 30px; border-radius: 5px;">
+            <h3>
+              <i class="fa fa-check fa-fw"></i>
+              KICK OFF
+            </h3>
+            <p>
+              5:30PM - 7:00PM<br>
+              Thrusday, November 9, 2017<br>
+            </p>
+          </div>
+          <div style="border: 1px solid #ddd; padding: 20px; margin: 30px; border-radius: 5px;">
+            <h3>
+              <i class="fa fa-facebook-square fa-fw"></i>
+              Facebook
+            </h3>
+            <p>
+              <a href="https://www.facebook.com/events/878271265682616/" class="button is-primary" target="_blank">Event page</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-8" style="width: 60%; display: inline-block; border: 1px solid #ddd; padding: 20px; margin: 20px; border-radius: 5px;">
+          <div>
+            <h3>
+              <i class="fa fa-map-marker fa-fw"></i>
+              Location
+            </h3>
+            <p>
+              <a href="https://goo.gl/maps/tDRjokULcw62" target="_blank">University of Missouri-Kansas City</a><br>
+              Kansas City, Missouri 64110
+            </p>
+            <br>
+            <p>
+              <a href="https://www.umkc.edu/maps/documents/volker_maps/UMKC-Volker_5-18-16-Flattened.pdf" class="button is-primary" target="_blank">Campus Map</a>
+            </p>
+            <br>
+            <iframe src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJr-5-EZrvwIcRXfZGJhwyEhQ&key=AIzaSyDwHHfYT-QvMXX5B9Ten6h02vJ49QI-6uI" frameborder="0" style="border:0;width:90%;max-width:700px;min-height:400px;" allowfullscreen=""></iframe>
+            <br>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-success" id="submission" >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Submission</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+        <div class="row">
+          <h2>Guidelines</h2>
+        </div>
+        <div class="row">
+          <ul class="text-white mb-5" >
+            <li>
+              Presentation link: Prepare a 5 slide ppt for your project. Post your ppt to public site (e.g., google drive) making available to the public.
+            </li>
+            <li>
+              Youtube link: Create a 3 minute video about your project. Make sure the transitions are smooth and use a good mic to record the audio. Upload your video to Youtube and make it viewable.
+            </li>
+            <li>
+              Repository link: Participants source code must be submitted in the form of a subversion repository url in Github. src folder: project files
+            </li>
+            <li>
+              ReadMe file: brief description and URL of the deployed application (if globally hosted)
+            </li>
+            <li>
+              If android application, create a folder called “apk” and put the .apk file inside the folder.
+            </li>
+            <li>
+              The repository submitted must be public and viewable for the reviewers.
+            </li>
+            <li>
+              The content the participant submits does not contain any viruses, Trojan horses, worms, or other disabling devices or harmful code.
+            </li>
+            <li>
+              Participants shall attribute all the content that is copyrighted, protected by trade secret, or otherwise subject to third-party intellectual property rights or other proprietary rights, including privacy and publicity rights.
+            </li>
+            <li>
+              The participant will not publish falsehoods or misrepresentations that could damage the hackathon, its sponsors, or any third party
+            </li>
+            <li>
+              The participant will not submit content that is unlawful, obscene, defamatory, libelous, threatening, pornographic, harassing, hateful, racially or ethnically offensive, encourages criminal activity, gives rise to civil liability, or is otherwise inappropriate or destructive to the hackathon's or sponsors' brand image or goodwill.
+            </li>
+          </ul>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <button class="btn btn-light btn-xl js-scroll-trigger" data-toggle="modal" data-target="#exampleModal">Submit</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section style="background: #bee5ff" id="Dashboard">
+      <div class="container" style="color:#143057" >
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Dashboard</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 >REGISTERED</h2></div>
+
+
+          <div ng-repeat="response in responses" class="col-md-3 text-center" >
+
+            <i class="fa fa-user-circle fa-5x text-white" style="font-size: 150px;" aria-hidden="true" ></i>
+            <h3 style="text-align: center; ">{{response.answers.textfield_uOAg06eFR1cR}}</h3>
+            <h5 style="text-align: center">{{response.answers.list_66474220_choice}}</h5>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 >SUBMITTED</h2></div>
+          <div ng-repeat="res in results" class="col-md-3 text-center" style="margin-top: 30px;" >
+
+            <i class="fa fa-user-circle fa-5x text-white" style="font-size: 150px;" aria-hidden="true" ></i>
+            <h3 style="text-align: center; ">{{res.teamname}}</h3>
+            <a href="{{res.pptlink}}" target="_blank"> PPT Link</a></br>
+            <a href="{{res.githublink}}" target="_blank"> GitHub Link</a></br>
+            <a href="{{res.youtubelink}}" target="_blank"> YouTube Link</a></br>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="judges" style="background-color: #c69500;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Judges</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+           <div class="col-md-3" style="text-align: center">
+                  <figure>
+                    <img alt="Vijay Walunj" class="user-photo photo_image image-replacement" src="img/judges/1.png">
+                  </figure>
+                <div>
+                  <p>
+                    <strong>Vijay Walunj</strong><br>
+                    <i>H&R Block</i>
+                  </p>
+                </div>
+           </div>
+        <div class="col-md-3" style="text-align: center">
+                  <figure>
+                    <img alt="Tim Brownfield" class="user-photo photo_image image-replacement" src="img/judges/2.png">
+                  </figure>
+                <div>
+                  <p>
+                    <strong>Tim Brownfield</strong><br>
+                    <i>H&R Block</i>
+                  </p>
+                </div>
+            </div>
+          <div class="col-md-3" style="text-align: center">
+                <figure>
+                  <img alt="Paul John" class="user-photo photo_image image-replacement" src="img/judges/3.jpg">
+                </figure>
+            <div>
+                <p>
+                  <strong>Paul John</strong><br>
+                  <i>IBM</i>
+                </p>
+              </div>
+            </div>
+          <div class="col-md-3" style="text-align: center">
+                <figure>
+                  <img alt="Mayank Raj" class="user-photo photo_image image-replacement" src="img/judges/4.jpg">
+                </figure>
+              <div>
+                <p>
+                  <strong>Mayank Raj</strong><br>
+                  <i>IBM</i>
+                </p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-md-3" style="text-align: center">
+            <figure>
+              <img alt="Srini Bhagavan" class="user-photo photo_image image-replacement" src="img/judges/5.png">
+            </figure>
+            <div>
+              <p>
+                <strong>Srini Bhagavan</strong><br>
+                <i>IBM</i>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3" style="text-align: center">
+            <figure>
+              <img alt="Paresh Kasare" class="user-photo photo_image image-replacement" src="img/judges/6.jpg">
+            </figure>
+            <div>
+              <p>
+                <strong>Paresh Kasare</strong><br>
+                <i>CBOE & Bats</i>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3" style="text-align: center">
+            <figure>
+              <img alt="Mathew Denney" class="user-photo photo_image image-replacement" src="img/judges/7.png">
+            </figure>
+            <div>
+              <p>
+                <strong>Mathew Denney</strong><br>
+                <i>CBOE & Bats</i>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3" style="text-align: center">
+            <figure>
+              <img alt="Alexis Petri" class="user-photo photo_image image-replacement" src="img/judges/8.jpg">
+            </figure>
+            <div>
+              <p>
+                <strong>Alexis Petri</strong><br>
+                <i>UMKC Propel</i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-3" style="text-align: center">
+            <figure>
+              <img alt="Buddy Pennington" class="user-photo photo_image image-replacement" src="img/judges/9.jpg">
+            </figure>
+            <div>
+              <p>
+                <strong>Buddy Pennington</strong><br>
+                <i>UMKC Propel</i>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3" style="text-align: center">
+            <figure>
+              <img alt="Katy Howard" class="user-photo photo_image image-replacement" src="img/judges/10.jpg">
+            </figure>
+            <div>
+              <p>
+                <strong>Katy Howard</strong><br>
+                <i>DST</i>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3" style="text-align: center">
+            <figure>
+              <img alt="Todd Brees" class="user-photo photo_image image-replacement" src="img/judges/11.jpg">
+            </figure>
+            <div>
+              <p>
+                <strong>Todd Brees</strong><br>
+                <i>DST</i>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3" style="text-align: center">
+            <figure>
+              <img alt="Kyle Harper" class="user-photo photo_image image-replacement" src="img/judges/12.jpg">
+            </figure>
+            <div>
+              <p>
+                <strong>Kyle Harper</strong><br>
+                <i>Cerner</i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+          <div class="col-md-3" style="text-align: center">
+            <figure>
+              <img alt="Manikanta Maddula" class="user-photo photo_image image-replacement" src="img/judges/13.jpg">
+            </figure>
+            <div>
+              <p>
+                <strong>Manikanta Maddula</strong><br>
+                <i>Cerner</i>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3" style="text-align: center">
+            <figure>
+              <img alt="Raj Anantharaman" class="user-photo photo_image image-replacement" src="img/judges/14.png">
+            </figure>
+            <div>
+              <p>
+                <strong>Raj Anantharaman</strong><br>
+                <i>Yoodle</i>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3" style="text-align: center">
+            <figure>
+              <img alt="Mohamoud Ali" class="user-photo photo_image image-replacement" src="img/judges/15.png">
+            </figure>
+            <div>
+              <p>
+                <strong>Mohamoud Ali</strong><br>
+                <i>VinSolutions</i>
+              </p>
+            </div>
+          </div>
+        </div>
+          </div>
+    </section>
+
+    <section class="text-white" id="sponsors" style="background-color: cadetblue;">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading" style="color: black">Sponsors</h2>
+            <hr class="my-4">
+          </div>
+        </div>
+      </div>
+      <div style="text-align: center;">
+        <img src="img/sponsors.png" style="height: 100%; width: 80%;"/>
+      </div>
+
+    </section>
+
+    <section class="bg-light" id="Schedule">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Schedule</h2>
+            <p>Take part in the Challenge, submit your project and win valuable prizes!</p>
+            <hr class="my-4">
+          </div>
+        </div>
+        <div class="row" style="color: #f05f40">
+          <div class="col-md-4" >
+            <h4>Date</h4>
+          </div>
+          <div class="col-md-4">
+            <h4> Event</h4>
+          </div>
+          <div class="col-md-4">
+            <h4> Location</h4>
+          </div>
+
+        </div>
+        <hr class="my-hr">
+        <div class="row">
+          <div class="col-md-4" >
+            <h5 class="ft"> 09th NOV @ 5:30 PM</h5>
+          </div>
+          <div class="col-md-4">
+            <h5 class="ft"> KICK OFF</h5>
+          </div>
+          <div class="col-md-4">
+            <h5 class="ft"> ROYALL HALL ROOM 111</h5>
+          </div>
+
+        </div>
+
+        <hr class="my-hr">
+        <div class="row">
+          <div class="col-md-4" >
+            <h5 class="ft"> 09th NOV @ 7 PM- 9PM</h5>
+          </div>
+          <div class="col-md-4">
+            <h5 class="ft"> REGISTRATION</h5>
+          </div>
+          <div class="col-md-4">
+            <h5 class="ft"> ONLINE</h5>
+          </div>
+
+        </div>
+
+        <hr class="my-hr">
+        <div class="row">
+          <div class="col-md-4" >
+            <h5 class="ft"> 12th NOV by 11:59 PM</h5>
+          </div>
+          <div class="col-md-4">
+            <h5 class="ft"> SUBMISSION</h5>
+          </div>
+          <div class="col-md-4">
+            <h5 class="ft"> ONLINE</h5>
+          </div>
+
+        </div>
+
+        <hr class="my-hr">
+        <div class="row">
+          <div class="col-md-4" >
+            <h5 class="ft"> 16th NOV @ 5:30 PM</h5>
+          </div>
+          <div class="col-md-4">
+            <h5 class="ft"> GRAND FINALE</h5>
+          </div>
+          <div class="col-md-4">
+            <h5 class="ft"> ROYAL HALL ROOM 111</h5>
+          </div>
+
+        </div>
+
+        <hr class="my-hr">
+        <div class="row">
+          <div class="col-md-4" >
+            <h5 class="ft"> 16th NOV @ 6:30 PM</h5>
+          </div>
+          <div class="col-md-4">
+            <h5 class="ft"> NETWORKING</h5>
+          </div>
+          <div class="col-md-4">
+            <h5 class="ft"> ROYAL HALL ROOM 111</h5>
+          </div>
+
+        </div>
+
+        <hr class="my-hr">
+      </div>
+    </section>
+
+    <section class="bg-dark text-white" id="usecases">
+      <div class="row" style="margin: 0px;">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Usecases</h2>
+          <hr class="my-4">
+        </div>
+      </div>
+      <div class="row" style="margin: 0px;">
+        <div class="col" >
+          <a target="_blank" href="https://github.com/UMKCNSF/UMKC--HACKATHON/wiki/Car-Gas-Mileage-Calculator-Mobile-App-by-H&R-Block"><button class="btn-sty">HR-MileageCalculator</button>
+          </a>
+        </div>
+        <div class="col" class="div-sty">
+          <a target="_blank" href="https://github.com/UMKCNSF/UMKC--HACKATHON/wiki/Financial-Inspiration-by-H&R-Block"><button class="btn-sty">HR-FinancialInspiration</button>
+          </a>
+        </div>
+        <div class="col" class="div-sty">
+          <a target="_blank" href="https://github.com/UMKCNSF/UMKC--HACKATHON/wiki/Micro-Service-Monitoring-by-IBM"><button class="btn-sty">IB-Microservice</button>
+          </a>
+        </div>
+        <div class="col" class="div-sty">
+          <a target="_blank" href="https://github.com/UMKCNSF/UMKC--HACKATHON/wiki/Assurance-Argument-Writer-for-HLC-Accreditation-Reaffirmation-by-UMKC-Provost's-Office"><button class="btn-sty">PR-ArgumentWriter</button>
+          </a>
+        </div></div>
+      <div class="row" style="margin: 0px;">
+        <div class="col">
+          <a target="_blank" href="https://github.com/UMKCNSF/UMKC--HACKATHON/wiki/Radar-Alert-of-Opioid-Overdoses--Deaths-by-DST"><button class="btn-sty">DS-RadarAlert</button>
+          </a>
+        </div>
+        <div class="col">
+          <a target="_blank" href="https://github.com/UMKCNSF/UMKC--HACKATHON/wiki/Library-Book-Recommendation-System-by-Rygbee"><button class="btn-sty">RY-LibraryRecommendation</button>
+          </a>
+        </div>
+        <div class="col">
+          <a target="_blank" href="https://github.com/UMKCNSF/UMKC--HACKATHON/wiki/Yoospots-In-image-Advertising-with-Interactive-Hotspots-by-Yoodle"><button class="btn-sty">YO-YooSpots</button>
+          </a>
+        </div>
+        <div class="col">
+          <a target="_blank" href="https://github.com/UMKCNSF/UMKC--HACKATHON/wiki/Smart-Drug-Drug-Interaction-Detector-by-Mayo-Clinic"><button class="btn-sty">MA-DrugInteraction</button>
+          </a>
+        </div></div>
+      <div class="row" style="margin: 0px;">
+        <div class="col">
+          <a target="_blank" href="https://github.com/UMKCNSF/UMKC--HACKATHON/wiki/Support-team-interface%C2%A0by-Pradyumna"><button class="btn-sty">GP-SupportTeam</button>
+          </a>
+        </div>
+        <div class="col">
+          <a target="_blank" href="https://github.com/UMKCNSF/UMKC--HACKATHON/wiki/Web-based-Hackathon-Management-Tool"><button class="btn-sty">VI-Hackathon</button>
+          </a> </div>
+        <div class="col">
+          <a target="_blank" href="https://github.com/UMKCNSF/UMKC--HACKATHON/wiki/Online-Doctor-Appointment-by-Rashmi-Manikanta"><button class="btn-sty">CU-DoctorAppointment</button>
+          </a>
+        </div>
+        <div class="col"
+        >
+          <a target="_blank" href="https://github.com/UMKCNSF/UMKC--HACKATHON/wiki/Phone-Mode-Change-by-karthik"><button class="btn-sty">UM-PhoneMode</button>
+          </a>
+        </div></div>
+      <div class="row" style="margin: 0px;">
+        <div class="col">
+          <a target="_blank" href="https://github.com/UMKCNSF/UMKC--HACKATHON/wiki/ToyBees-Billing-and-Recommendation-System-by-Sidrah"><button class="btn-sty">UM-BillingSystem</button>
+          </a>
+        </div>
+        <div class="col">
+          <a target="_blank" href="https://github.com/UMKCNSF/UMKC--HACKATHON/wiki/Resume-Filtering-by-Megha"><button class="btn-sty">UM-Resume</button>
+          </a>
+        </div>
+        <div class="col">
+          <a target="_blank" href="https://github.com/UMKCNSF/UMKC--HACKATHON/wiki/Group-the-related-TED-talks"><button class="btn-sty">UM-TedTalks</button>
+          </a></div>
+        <div class="col">
+          <a target="_blank" href="https://github.com/UMKCNSF/UMKC--HACKATHON/wiki/Predicting-the-house-prices-by-Saria"><button class="btn-sty">UM-HousePrice</button>
+          </a></div>
+      </div>
+    </section>
+
+    <section class="p-0" id="Gallery">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters popup-gallery">
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/1.jpg">
+              <img class="img-fluid" src="img/1.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/2.jpg">
+              <img class="img-fluid" src="img/2.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/3.jpg">
+              <img class="img-fluid" src="img/3.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/4.jpg">
+              <img class="img-fluid" src="img/4.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/5.jpg">
+              <img class="img-fluid" src="img/5.jpg" alt="">
+            </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+            <a class="portfolio-box" href="img/6.jpg">
+              <img class="img-fluid" src="img/6.jpg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Let's Get In Touch!</h2>
+            <hr class="my-4">
+            <p class="mb-5">Ready to take up the challenge and start coding? That's great! In case of any queries send us an email and we will get back to you as soon as possible!</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+            <p>(816) 235-1000</p>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+            <p>
+              <a href="mailto:umkc_hackathon@mail.missouri.edu">umkc_hackathon@mail.missouri.edu</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>-->
+
+
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="col-lg-8 mx-auto text-center">
+              <h2 class="section-heading">Organizers</h2>
+              <hr class="my-4">
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <h5 class="font-italic">Dr. Yugyung Lee</h5>
+                <h5 class="font-italic">Megha Nagabhushan</h5>
+                <h5 class="font-italic">Sidrah Junaid</h5>
+                <h5 class="font-italic">Rohit Kumar </h5>
+                <h5 class="font-italic">Karthik Reddy </h5>
+                <h5 class="font-italic">Rashmi Tripati</h5>
+                <h5 class="font-italic">Marmik Patel</h5>
+
+              </div>
+              <div class="col-md-6">
+                <h5 class="font-italic">Vijaya Kumari</h5>
+                <h5 class="font-italic">Saria Goudarzvand</h5>
+                <h5 class="font-italic">Sriharsha Sai</h5>
+                <h5 class="font-italic">Prudhvi Sai</h5>
+                <h5 class="font-italic">Shankar Chowdary</h5>
+                <h5 class="font-italic">Nageswara Rao</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-8">
+
+            <div class="col-lg-8 mx-auto text-center">
+              <h2 class="section-heading">Let's Get In Touch!</h2>
+              <hr class="my-4">
+              <p class="mb-5">Ready to take up the challenge and start coding? That's great! In case of any queries send us an email and we will get back to you as soon as possible!</p>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 ml-auto text-center">
+                <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+                <p>(816) 235-1000</p>
+              </div>
+              <div class="col-lg-4 mr-auto text-center">
+                <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+                <p>
+                  <a href="mailto:umkc_hackathon@mail.missouri.edu">umkc_hackathon@mail.missouri.edu</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Submit your Code</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container_child signup_form" ng-model="userdata">
+              <form action="#">
+                <div class="form-group">
+                  <label for="name" style="color : black;  font-style: italic;">Team Name</label>
+                  <input class="form-control" type="text" name="username" id="name" placeholder="" required />
+                </div>
+                <div class="form-group">
+                  <label for="ppt" style="color : black;  font-style: italic;">URL for PPT</label>
+                  <input class="form-control" type="text" name="ppt" id="ppt" placeholder="" required />
+                </div>
+                <div class="form-group">
+                  <label for="github" style="color : black;  font-style: italic;">URL for Github link</label>
+                  <input class="form-control" type="text" name="password" id="github" placeholder="" required />
+                </div>
+                <div class="form-group">
+                  <label for="youtube" style="color : black;  font-style: italic;">URL for youtube link</label>
+                  <input class="form-control" type="text" name="passwordRepeat" id="youtube"  placeholder="" required />
+                </div>
+                <div class="form-group">
+                  <label for="email" style="color : black;  font-style: italic;">Email</label>
+                  <input class="form-control" type="email" name="passwordRepeat" id="email"  placeholder="" required />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" ng-click="insert()" style="cursor: pointer">Submit</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" style="cursor: pointer">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-sanitize.js"></script>
+    <script src="js/creative.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/countdown.js"></script>
+  </body>
+
+</html>
