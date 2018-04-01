@@ -482,9 +482,9 @@ html {
     max-width: 25%;
   }
   .col-md-4 {
-    -ms-flex: 0 0 33.333333%;
-        flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    -ms-flex: 0 0 40.00%;
+        flex: 0 0 40.00%;
+    max-width: 40.00%;
   }
   .col-md-5 {
     -ms-flex: 0 0 41.666667%;
@@ -502,9 +502,9 @@ html {
     max-width: 58.333333%;
   }
   .col-md-8 {
-    -ms-flex: 0 0 66.666667%;
-        flex: 0 0 66.666667%;
-    max-width: 66.666667%;
+    -ms-flex: 0 0 60.00%;
+        flex: 0 0 60.00%;
+    max-width: 60.00%;
   }
   .col-md-9 {
     -ms-flex: 0 0 75%;
